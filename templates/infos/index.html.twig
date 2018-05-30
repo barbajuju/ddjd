@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<h1>Infos : </h1>
+
+<form id="loginForm">
+    <input id="login" type="text" placeholder="votre pseudo"/>
+    <input id="password" type="password" placeholder="mot de passe">
+    <button id="submitForm" type="submit">Valider</button>
+
+</form>
+
+    <div id="divInfos" hidden>
+        <h3>Bonjour <span id="nom" : ></span></h3>
+        <p>Votre pseudo est : <span id="pseudo"></span></p>
+        <p>Votre mail est : <span id="mail"></span></p>
+
+    </div>
+
+{% endblock %}
+
+

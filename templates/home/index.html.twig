@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    <h2>Connexion des membres</h2>
+    <div>
+        <ul>
+            {% for user in users %}
+
+                <li>{{ user.getNickname() }}</li>
+
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endblock %}

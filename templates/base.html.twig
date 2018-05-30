@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header
+            {% if sessionX is defined and sessionX != null%}
+                class="fireClass"
+            {% endif %}>
+
+            <h1>Welcome in PHP HELL
+                {% if sessionX is defined and sessionX != null%}
+                    : {{ sessionX }}
+                {% endif %}
+            </h1>
+        </header>
+        <nav>
+
+            <ul>
+                <a href="{{ path('home') }}"><li>Accueil</li></a>
+                {% if sessionX is not defined or sessionX == null %}
+                    <a href="{{ path('login') }}"><li>Connexion</li></a>
+                    <a href="{{ path('new') }}"><li>Créer un compte</li></a>
+                    <a href="{{ path('new_user') }}"><li>Créer un compte API</li></a>
+
+                {% endif %}
+
+                {% if sessionX is defined and sessionX != null%}
+                <a href="{{ path('monster') }}"><li>Déconnexion</li></a>
+                {% endif %}
+                <a href="{{ path('infos') }}"><li>Infos</li></a>
+
+            </ul>
+        </nav>
+        <main>
+
+            {% block body %}{% endblock %}
+        </main>
+        <script src="{{ asset('js/jquery-3.3.1.js')}}"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

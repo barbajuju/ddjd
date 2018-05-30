@@ -1,0 +1,72 @@
+body{
+    background: #dadada;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-image: url("../img/fire.png") ;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: radial-gradient(#dadada, #f6f6f6);
+    margin: auto;
+    height: 50px;
+}
+nav a{
+    vertical-align: center;
+    text-decoration: none;
+    border: #AAAAAA 1px solid;
+    width: 150px;
+    height: 48px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+
+}
+nav li{
+    margin: auto;
+}
+header{
+    background: radial-gradient(#dadada, #f6f6f6);
+    text-align: center;
+}
+
+.fireClass{
+    background-image: url("../img/fire.png") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+
+}
+.monster{
+    width: 150px;
+    border: black solid 1px;
+}
+
+#monsterlist{
+    display: flex;
+    flex-wrap: wrap;
+}
+#newForm{
+    margin-left: 20px;
+    border: solid 1px black;
+    display: block;
+    height: 200px;
+    width: 600px;
+}
+
+#newForm input{
+
+    width: 300px;
+}
+#newForm label{
+
+    width: 200px;
+    float: left;
+}

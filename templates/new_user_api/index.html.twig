@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block main %}
+    <h1>Création d'un nouvel utilisateur via API</h1>
+
+    <div id="newForm">
+        <form method="post" action="">
+            <input id="nickname" type="text" name="nickname" placeholder="Surnom :">
+            <input id="name" type="text" name="name" placeholder="Nom :">
+            <input id="mail" type="text" name="mail" placeholder="Mail :">
+            <input id="password" type="password" name="password" placeholder="Votre mot de passe :">
+            <button id="newSubmitForm" type="submit">Valider</button>
+        </form>
+    </div>
+
+{% endblock %}

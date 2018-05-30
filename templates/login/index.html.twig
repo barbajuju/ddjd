@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    <h2>Login par session</h2>
+
+    <form method="post" action="{{ path('connection') }}">
+        <label for="log">Votre pseudo :</label>
+        <input type="text" name="log">
+        <label for="pwd">Votre mot de passe :</label>
+        <input type="password" name="pwd">
+        <input type="submit" value="Chercher">
+    </form>
+
+    <h2>Login par api</h2>
+
+    <form method="post" action="{{ path('api') }}">
+        <label for="log">Votre pseudo :</label>
+        <input type="text" name="log">
+        <label for="pwd">Votre mot de passe :</label>
+        <input type="password" name="pwd">
+        <input type="submit" value="Chercher">
+    </form>
+{% endblock %}
+
